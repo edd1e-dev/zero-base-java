@@ -18,6 +18,8 @@ public class Practice {
 
 
         // 람다식으로 작성
+        CompareTool cTool2 = (num1, num2) -> { return num1 > num2 ? num1 : num2; };
+        System.out.println(cTool2.getMaxNum(10, 11));
 
     }
 }
