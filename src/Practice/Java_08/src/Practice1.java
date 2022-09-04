@@ -22,11 +22,14 @@ class Cat extends Animal {
     String desc;
     Cat() {
         this.desc = "고양이 입니다.";
+//        super.desc = "고양이 입니다.";
+//        super("고양이 입니다.");
     }
 }
 
 public class Practice1 {
     public static void main(String[] args) {
+
         // Test code
         Cat cat = new Cat();
         cat.printInfo();
