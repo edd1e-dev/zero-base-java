@@ -1,8 +1,17 @@
 package Practice.Java_18_1.src;
 
+import java.util.Scanner;
+
 public class Practice2 {
     public static void solution() {
+        Scanner sc = new Scanner(System.in);
+        char c = sc.next().charAt(0);
 
+        if (c >= 'a' && c <= 'z') {
+            System.out.printf("%c", c - ('a' - 'A'));
+        } else if (c >= 'A' && c <= 'Z') {
+            System.out.printf("%c", c + ('a' - 'A'));
+        }
     }
 
     public static void reference() {
