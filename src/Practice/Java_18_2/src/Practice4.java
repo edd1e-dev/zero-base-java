@@ -1,5 +1,8 @@
 package Practice.Java_18_2.src;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class Practice4 {
     public static String solution(int[] keyLog) {
         final int BACK_SPACE = 8;
@@ -11,7 +14,78 @@ public class Practice4 {
         final int INSERT = 155;
         final int DELETE = 127;
 
-        return null;
+        StringBuffer loggedString = new StringBuffer();
+        boolean isCapsLock = false;
+        boolean isShift = false;
+        boolean isInsert = false;
+        int idx = 0;
+        int cur = 0;
+
+        while (idx < keyLog.length) {
+            int key = keyLog[idx];
+            if (key == BACK_SPACE) {
+                if (loggedString.isEmpty()) {
+                    idx++;
+                    continue;
+                }
+                loggedString.delete(cur - 1, cur);
+                if (cur > 0) cur--;
+            } else if (key == SHIFT) {
+                isShift = !isShift;
+            } else if (key == CAPS_LOCK) {
+                isCapsLock = !isCapsLock;
+            } else if (key == SPACE_BAR) {
+                loggedString.insert(cur, " ");
+                cur++;
+            } else if (key >= 97 && key <= 122) {
+                int step = ('a' - 'A');
+                if (isInsert) {
+                    loggedString.delete(cur, cur + 1);
+                }
+                if ((isCapsLock && !isShift) || (!isCapsLock && isShift)) {
+                    loggedString.insert(cur, (char) (keyLog[idx] - step));
+                } else {
+                    loggedString.insert(cur, (char) (keyLog[idx]));
+                }
+                isShift = false;
+                cur++;
+            } else if (key == KEY_LEFT) {
+                if (cur > 0) cur--;
+            } else if (key == KEY_RIGHT) {
+                if (cur < loggedString.length()) cur++;
+            } else if (key == INSERT) {
+                isInsert = !isInsert;
+            } else if (key == DELETE) {
+                loggedString.delete(cur, cur + 1);
+            } else if (key >= 48 && key <= 57) {
+                Map<Integer, Character> specialKeys = new HashMap<>() {{
+                    put(48, ')');
+                    put(49, '!');
+                    put(50, '@');
+                    put(51, '#');
+                    put(52, '$');
+                    put(53, '%');
+                    put(54, '^');
+                    put(55, '&');
+                    put(56, '*');
+                    put(57, '(');
+                }};
+                if (isInsert) {
+                    loggedString.delete(cur, cur + 1);
+                }
+                if (!isCapsLock && !isShift) {
+                    loggedString.insert(cur, (char) (keyLog[idx]));
+                } else {
+                    loggedString.insert(cur, specialKeys.get(key));
+                }
+                isShift = false;
+                cur++;
+            }
+
+            idx++;
+        }
+
+        return loggedString.toString();
     }
 
     public static void main(String[] args) {
