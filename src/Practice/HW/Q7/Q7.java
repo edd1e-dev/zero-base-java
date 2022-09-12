@@ -73,18 +73,11 @@ public class Q7 {
     }
 
     private static void getCommaAppliedString(StringBuilder sb, String[] lotteries) {
-        for (int idx = 0; idx < lotteries.length - 1; ++idx) {
-            if (Integer.parseInt(lotteries[idx]) < 10) {
-                sb.append(0).append(Integer.parseInt(lotteries[idx])).append(",");
-            } else {
-                sb.append(Integer.parseInt(lotteries[idx])).append(",");
+        for (int idx = 0; idx < lotteries.length;) {
+            sb.append(String.format("%02d", Integer.parseInt(lotteries[idx])));
+            if (++idx < lotteries.length) {
+                sb.append(",");
             }
-        }
-
-        if (Integer.parseInt(lotteries[lotteries.length - 1]) < 10) {
-            sb.append(0).append(Integer.parseInt(lotteries[lotteries.length - 1]));
-        } else {
-            sb.append(Integer.parseInt(lotteries[lotteries.length - 1]));
         }
     }
 
