@@ -26,14 +26,9 @@ public class HW2 {
             total += n;
         }
 
-        double test = 0.0d;
-
         for (int i = 0; i < alphabetLength; ++i) {
             // BigDecimal data = new BigDecimal(count[i]).divide(total).multiply(BigDecimal.valueOf(100));
-            System.out.println(String.format(" %c = %6d개, %3f%%", (char)(i + 'A'), count[i], ((double)count[i]) / ((double)total) * 100.0d));
-            test += ((double)count[i]) / ((double)total) * 100.0d;
+            System.out.println(String.format(" %c = %6d개, %6.2f%%", (char)(i + 'A'), count[i], ((double)count[i]) / ((double)total) * 100.0d));
         }
-
-        System.out.println(test);
     }
 }
