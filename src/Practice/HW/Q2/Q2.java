@@ -2,6 +2,10 @@ package Practice.HW.Q2;
 
 import java.util.Scanner;
 
+/**
+ * 제로베이스 백엔드 5기 강상우(edd1e-dev.git)
+ * comment: 페이백이 100단위가 아닐 시 내림을 하도록 구현하였습니다.
+ */
 public class Q2 {
     public static void main(String[] args) {
         System.out.println("[캐시백 계산]");
@@ -18,6 +22,6 @@ public class Q2 {
             cashBack = CASH_BACK_LIMIT;
         }
 
-        System.out.printf("결제 금액은 %d원이고, 캐시백은 %d원 입니다.\n", pay, cashBack);
+        System.out.printf("결제 금액은 %d원이고, 캐시백은 %d원 입니다.", pay, cashBack);
     }
 }

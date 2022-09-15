@@ -3,6 +3,10 @@ package Practice.HW.Q4;
 import java.util.Random;
 import java.util.Scanner;
 
+/**
+ * 제로베이스 백엔드 5기 강상우(edd1e-dev.git)
+ * comment: JDK 9+ 부터는 StringConcatFactory가 StringBuilder로서 처리해주지만 이하 버전의 호환성을 위해 StringBuilder를 직접 사용하였습니다.
+ */
 public class Q4 {
     public static void main(String[] args) {
         final int NINTEEN_CENTURY_MALE = 1,
@@ -24,19 +28,10 @@ public class Q4 {
         char gender = sc.next().charAt(0);
 
         StringBuilder sb = new StringBuilder();
-        sb.append(String.format("%02d", birthYear >= 2000 ? birthYear - 2000 : birthYear - 1000)); // 생년
+        sb.append(String.format("%02d", birthYear >= 2000 ? birthYear - 2000 : birthYear - 1900)); // 생년
+        sb.append(String.format("%02d", birthMonth)); // 생월
+        sb.append(String.format("%02d", birthDay)); // 생일
 
-        if (birthMonth < 10) { // 생월
-            sb.append("0");
-        }
-
-        sb.append(birthMonth);
-
-        if (birthDay < 10) { // 생일
-            sb.append("0");
-        }
-
-        sb.append(birthDay);
         sb.append("-");
 
         if (birthYear >= 2000) { // 성별

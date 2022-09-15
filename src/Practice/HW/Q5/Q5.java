@@ -4,6 +4,10 @@ import java.time.LocalDate;
 import java.time.temporal.ChronoField;
 import java.util.Scanner;
 
+/**
+ * 제로베이스 백엔드 5기 강상우(edd1e-dev.git)
+ * comment: 첫 주가 1일부터 시작 시 발생하는 오류 해결하였습니다. 예시) 2022년 05월
+ */
 public class Q5 {
     public static void main(String[] args) {
         System.out.println("[달력 출력 프로그램]");
@@ -19,12 +23,9 @@ public class Q5 {
         sb.append("\n일\t월\t화\t수\t목\t금\t토");
 
         LocalDate localDate = LocalDate.of(year, month, 1);
-        // 첫 주가 1일부터 시작 시 발생하는 오류 해결 예) 2022년 05월
         int startDay = localDate.get(ChronoField.DAY_OF_WEEK) == 7 ? 0 : localDate.get(ChronoField.DAY_OF_WEEK);
         int lastDay = localDate.lengthOfMonth();
         int day = 1;
-
-        System.out.println(startDay);
 
         for (int idx = 0; idx <= startDay + lastDay; ++idx) {
             if (idx <= startDay) {
@@ -38,6 +39,6 @@ public class Q5 {
             }
         }
 
-        System.out.println(sb);
+        System.out.print(sb);
     }
 }

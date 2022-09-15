@@ -1,5 +1,10 @@
 package Practice.HW.Q1;
 
+
+/**
+ * 제로베이스 백엔드 5기 강상우(edd1e-dev.git)
+ * comment: 기본적인 구구단 로직입니다. 좌측부터 낮은 단이 오도록 출력 형식을 일치시켰습니다.
+ */
 public class Q1 {
     public static void main(String[] args) {
         final int MAGIC_NUMBER = 9;
