@@ -2,6 +2,10 @@ package Practice.HW.Q6;
 
 import java.util.*;
 
+/**
+ * 제로베이스 백엔드 5기 강상우(edd1e-dev.git)
+ * comment: 동률일 경우 재투표가 바로 진행되도록 구현하였습니다.
+ */
 public class Q6 {
     public static void main(String[] args) {
         final int MAX_VOTE = 10000;

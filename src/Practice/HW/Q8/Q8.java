@@ -2,6 +2,10 @@ package Practice.HW.Q8;
 
 import java.util.*;
 
+/**
+ * 제로베이스 백엔드 5기 강상우(edd1e-dev.git)
+ * comment: 유지보수가 주기적으로 발생하는 로직이라는 전제로, Magic Number를 없애기 위해 배열이 아닌 enum으로 정의하였습니다.
+ */
 public class Q8 {
     enum Boundary {
         FIRST(0),

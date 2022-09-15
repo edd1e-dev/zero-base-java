@@ -2,6 +2,10 @@ package Practice.HW.Q7;
 
 import java.util.*;
 
+/**
+ * 제로베이스 백엔드 5기 강상우(edd1e-dev.git)
+ * comment: Nothing
+ */
 public class Q7 {
     public static void main(String[] args) {
         System.out.println("[로또 당첨 프로그램]\n");
