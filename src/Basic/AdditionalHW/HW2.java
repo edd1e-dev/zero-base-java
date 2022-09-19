@@ -4,10 +4,12 @@ import java.math.BigDecimal;
 
 import static java.math.BigDecimal.ROUND_UNNECESSARY;
 
+/**
+ * 제로베이스 백엔드 5기 강상우(edd1e-dev.git)
+ * comment: JDK 9+ 부터는 일반적인 String도 StringBuilder 처리되어서 동작함.
+ */
 public class HW2 {
     public static void main(String[] args) {
-        // JDK 9+ 부터는 일반적인 String도 StringBuilder 처리되어서 동작함.
-
         String content = new FileUtils().getLoadText("./AdditionalHW2.txt");
         final int alphabetLength = 26;
         int[] count = new int[alphabetLength];

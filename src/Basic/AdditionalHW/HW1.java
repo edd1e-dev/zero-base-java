@@ -2,6 +2,10 @@ package Practice.AdditionalHW;
 
 import java.util.Scanner;
 
+/**
+ * 제로베이스 백엔드 5기 강상우(edd1e-dev.git)
+ * comment: Nothing
+ */
 public class HW1 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
