@@ -19,12 +19,36 @@ public class Main {
         int nAandB = 0;
         
         // 기본 풀이
+        for (int item1 : dice1) {
+            for (int item2 : dice2) {
+                if ((item1 + item2) % 3 == 0) {
+                    nA++;
+                }
 
+                if ((item1 + item2) % 4 == 0) {
+                    nB++;
+                }
 
+                if ((item1 + item2) % 12 == 0) {
+                    nAandB++;
+                }
+            }
+        }
+
+        System.out.println("기본 풀이 결과: " + (nA + nB - nAandB));
         
         // HashSet 이용
+        HashSet<ArrayList> allCase = new HashSet<>();
+        for (int item1 : dice1) {
+            for (int item2 : dice2) {
+                if ((item1 + item2) % 3 == 0 || (item1 + item2) % 4 == 0) {
+                    ArrayList list = new ArrayList(Arrays.asList(item1, item2));
+                    allCase.add(list);
+                }
+            }
+        }
 
-
+        System.out.println("HashSet 풀이 결과: " + allCase.size());
 
 //      2. 곱의 법칙
         System.out.println("== 곱의 법칙 ==");
@@ -32,6 +56,19 @@ public class Main {
         nA = 0;
         nB = 0;
 
+        for (int item1 : dice1) {
+            if (item1 % 3 == 0) {
+                nA++;
+            }
+        }
+
+        for (int item1 : dice2) {
+            if (item1 % 4 == 0) {
+                nB++;
+            }
+        }
+
+        System.out.println("결과: " + (nA * nB));
 
     }
 }

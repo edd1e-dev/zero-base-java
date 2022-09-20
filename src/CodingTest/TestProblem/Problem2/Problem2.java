@@ -15,8 +15,19 @@ public class Problem2 {
         return list.stream().mapToInt(i -> i).toArray();
     }
 
+    public static void printArray(int[] arr) {
+        System.out.print("[");
+        for (int i = 0; i < arr.length;) {
+            System.out.print(arr[i]);
+            if (++i < arr.length) {
+                System.out.print(",");
+            }
+        }
+        System.out.println("]");
+    }
+
     public static void main(String[] args) {
-        System.out.println(solution(new int[] {1,1,3,3,0,1,1})); // [1,3,0,1]
-        System.out.println(solution(new int[] {4,4,4,3,3})); // [4,3]
+        printArray(solution(new int[] {1,1,3,3,0,1,1})); // [1,3,0,1]
+        printArray(solution(new int[] {4,4,4,3,3})); // [4,3]
     }
 }
