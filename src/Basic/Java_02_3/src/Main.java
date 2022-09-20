@@ -1,4 +1,4 @@
-package Practice.Java_02_3.src;// Java 프로그래밍 - 변수와 자료형_3
+package Basic.Java_02_3.src;// Java 프로그래밍 - 변수와 자료형_3
 
 import java.util.Locale;
 

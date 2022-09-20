@@ -1,6 +1,6 @@
-package Practice.Java_07_2.src;// Java 프로그래밍 - 클래스와 객체_2
+package Basic.Java_07_2.src;// Java 프로그래밍 - 클래스와 객체_2
 
-import Practice.Java_07_2.src.car.Car2;
+import Basic.Java_07_2.src.car.Car2;
 
 class Car {
     String name;

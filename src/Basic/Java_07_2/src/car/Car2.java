@@ -1,4 +1,4 @@
-package Practice.Java_07_2.src.car;
+package Basic.Java_07_2.src.car;
 
 public class Car2 {
     public String name1;

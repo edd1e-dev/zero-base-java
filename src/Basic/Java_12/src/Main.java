@@ -1,4 +1,4 @@
-package Practice.Java_12.src;// Java 프로그래밍 - 내부 클래스
+package Basic.Java_12.src;// Java 프로그래밍 - 내부 클래스
 
 class Outer {
 

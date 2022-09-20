@@ -1,4 +1,4 @@
-package Practice.Java_03_2.src;// Java 프로그래밍 - 여러가지 연산자_2
+package Basic.Java_03_2.src;// Java 프로그래밍 - 여러가지 연산자_2
 
 public class Main {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package Practice.Java_18_2.src;
+package Basic.Java_18_2.src;
 
 import java.util.HashMap;
 import java.util.Map;

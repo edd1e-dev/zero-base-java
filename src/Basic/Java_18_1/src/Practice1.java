@@ -1,4 +1,4 @@
-package Practice.Java_18_1.src;
+package Basic.Java_18_1.src;
 
 public class Practice1 {
     public static void solution(int num) {

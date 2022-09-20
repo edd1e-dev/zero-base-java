@@ -1,4 +1,4 @@
-package Practice.Java_07_1.src;// Java 프로그래밍 - 클래스와 객체_1
+package Basic.Java_07_1.src;// Java 프로그래밍 - 클래스와 객체_1
 
 class Car {
     String name;

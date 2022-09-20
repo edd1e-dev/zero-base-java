@@ -1,4 +1,4 @@
-package Practice.Java_02_1.src;// Java 프로그래밍 - 변수와 자료형_1
+package Basic.Java_02_1.src;// Java 프로그래밍 - 변수와 자료형_1
 
 public class Main {
     public static void main(String[] args) {

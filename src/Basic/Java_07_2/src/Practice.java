@@ -1,4 +1,4 @@
-package Practice.Java_07_2.src;// Practice
+package Basic.Java_07_2.src;// Practice
 // 계산기 덧셈의 여러 타입 오버로딩
 
 class Calculator {

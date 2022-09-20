@@ -1,4 +1,4 @@
-package Practice.Java_04.src;// Java 프로그래밍 - 조건문
+package Basic.Java_04.src;// Java 프로그래밍 - 조건문
 
 public class Main {
     public static void main(String[] args) {

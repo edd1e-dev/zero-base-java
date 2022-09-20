@@ -1,4 +1,4 @@
-package Practice.Java_17.src;// Practice
+package Basic.Java_17.src;// Practice
 // 하기 예제를 스트림으로 구현해보세요.
 
 import java.util.Arrays;

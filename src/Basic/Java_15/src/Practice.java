@@ -1,4 +1,4 @@
-package Practice.Java_15.src;// Practice
+package Basic.Java_15.src;// Practice
 // 로또 번호 만들기
 
 import java.util.Collections;

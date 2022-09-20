@@ -1,4 +1,4 @@
-package Practice.Java_14.src;// Java 프로그래밍 - 예외 처리
+package Basic.Java_14.src;// Java 프로그래밍 - 예외 처리
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;

@@ -1,4 +1,4 @@
-package Practice.Java_10.src;// Java 프로그래밍 - 추상 클래스
+package Basic.Java_10.src;// Java 프로그래밍 - 추상 클래스
 
 // 추상 클래스 Person
 abstract class Person {

@@ -1,4 +1,4 @@
-package Practice.Java_16.src;// Practice
+package Basic.Java_16.src;// Practice
 // 아래 인터페이스를 이용하여 익명클래스로 구현한 내용을 람다식으로 구현해보세요.
 
 interface CompareTool {

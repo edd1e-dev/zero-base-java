@@ -1,4 +1,4 @@
-package Practice.Java_13_1.src;// Java 프로그래밍 - 입출력_1
+package Basic.Java_13_1.src;// Java 프로그래밍 - 입출력_1
 
 import java.io.BufferedReader;
 import java.io.IOException;

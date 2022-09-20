@@ -1,4 +1,4 @@
-package Practice.Java_11.src;// Java 프로그래밍 - 인터페이스
+package Basic.Java_11.src;// Java 프로그래밍 - 인터페이스
 
 // School 인터페이스
 interface School {

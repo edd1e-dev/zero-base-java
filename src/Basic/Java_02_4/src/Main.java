@@ -1,4 +1,4 @@
-package Practice.Java_02_4.src;// Java 프로그래밍 - 변수와 자료형_4
+package Basic.Java_02_4.src;// Java 프로그래밍 - 변수와 자료형_4
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;

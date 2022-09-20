@@ -1,4 +1,4 @@
-package Practice.Java_06.src;// Java 프로그래밍 - 다차원 배열
+package Basic.Java_06.src;// Java 프로그래밍 - 다차원 배열
 
 public class Main {
     public static void main(String[] args) {
