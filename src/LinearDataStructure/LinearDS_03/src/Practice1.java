@@ -10,7 +10,24 @@ package LinearDataStructure.LinearDS_03.src;// Practice1
 
 public class Practice1 {
     public static void main(String[] args) {
+        double odd = 0;
+        double even = 0;
+        int oddCount = 0;
+        int evenCount = 0;
+        int[] arr = {1, 2, 3, 4, 5, 6, 7, 8, 9};
 
+        for (int i = 0; i < arr.length; i++) {
+            if (i % 2 == 0) {
+                even += arr[i];
+                evenCount++;
+            } else {
+                odd += arr[i];
+                oddCount++;
+            }
+        }
+
+        System.out.println("짝수 평균: " + even / evenCount);
+        System.out.println("홀수 평균: " + odd / oddCount);
     }
 
 }

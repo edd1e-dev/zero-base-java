@@ -8,6 +8,16 @@ package LinearDataStructure.LinearDS_03.src;// Practice2
 
 public class Practice2 {
     public static void main(String[] args) {
+        int[] arr = {1, 1, 100, 1, 1, 1, 100};
+        int target = 100;
+        int maxIndex = -1;
 
+        for (int i = 0; i < arr.length; i++) {
+            if (target == arr[i]) {
+                maxIndex = i;
+            }
+        }
+
+        System.out.println(maxIndex);
     }
 }

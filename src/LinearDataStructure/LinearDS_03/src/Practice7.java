@@ -16,6 +16,20 @@ package LinearDataStructure.LinearDS_03.src;// Practice7
 
 public class Practice7 {
     public static void main(String[] args) {
+        int arr[][] = { { 1, 2, 3, 4, 5 }, { 6, 7, 8, 9, 10 }, { 11, 12, 13, 14, 15 } };
+        int arr90[][] = new int[arr[0].length][arr.length];
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[0].length; j++) {
+                int r = arr.length - 1 - i;
+                arr90[j][r] = arr[i][j];
+            }
+        }
 
+        for (int i = 0; i < arr90.length; i++) {
+            for (int j = 0; j < arr90[0].length; j++) {
+                System.out.printf(arr90[i][j] + " ");
+            }
+            System.out.println();
+        }
     }
 }

@@ -12,6 +12,25 @@ package LinearDataStructure.LinearDS_05.src;// Practice3
 
 public class Practice3 {
     public static LinkedList reverseList(LinkedList list, int left, int right) {
+        Node cur1 = list.head;
+        Node pre1 = null;
+
+        for (int i = 0; i < left - 1; i++) {
+            pre1 = cur1;
+            cur1 = cur1.next;
+        }
+
+        Node cur2 = list.head;
+        Node pre2 = pre1;
+        Node after = null;
+
+        for (int i = left; i <= right; i++) {
+            after = cur2.next;
+            cur2.next = pre2;
+            pre2 = cur2;
+            cur2 = after;
+        }
+
         return null;
     }
     

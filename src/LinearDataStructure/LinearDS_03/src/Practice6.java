@@ -5,8 +5,28 @@ package LinearDataStructure.LinearDS_03.src;// Practice6
 // arr: 1, 5, 3, 2, 2, 3, 1, 4, 1, 2, 3, 5
 // 결과: 1, 5, 3, 2, 4
 
+import java.util.Arrays;
+
 public class Practice6 {
     public static void main(String[] args) {
+        int[] arr = {1, 5, 3, 2, 2, 3, 1, 4, 1, 2, 3, 5};
+        int[] arrResult = new int[arr.length];
+        int cnt = 0;
 
+        for (int i = 0; i < arr.length; i++) {
+            boolean dupFlag = false;
+            for (int j = 0; j < cnt; j++) {
+                if (arr[i] == arrResult[j]) {
+                    dupFlag = true;
+                }
+            }
+
+            if (dupFlag == false) {
+                arrResult[cnt] = arr[i];
+                cnt++;
+            }
+        }
+
+        System.out.println(Arrays.toString(arrResult));
     }
 }

@@ -16,7 +16,34 @@ package LinearDataStructure.LinearDS_05.src;// Practice2
 
 public class Practice2 {
     public static boolean checkPalindrome(LinkedList list) {
-        return false;
+
+        int size = 0;
+        Node cur = list.head;
+        Node left = list.head;
+        Node right = null;
+        while (cur != null) {
+            size++;
+            right = cur;
+            cur = cur.next;
+        }
+
+        Node prevRight = right;
+
+        for (int i = 0; i < size / 2; i++) {
+
+            if (left.data != right.data) {
+                return false;
+            }
+
+            left = left.next;
+            right = left;
+
+            while(right.next != prevRight) {
+                right = right.next;
+            }
+        }
+
+        return true;
     }
 
     public static void main(String[] args) {
