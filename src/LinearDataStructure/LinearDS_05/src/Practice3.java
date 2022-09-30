@@ -12,16 +12,16 @@ package LinearDataStructure.LinearDS_05.src;// Practice3
 
 public class Practice3 {
     public static LinkedList reverseList(LinkedList list, int left, int right) {
-        Node cur1 = list.head;
-        Node pre1 = null;
+        Node cur1 = list.head; // 끝까지
+        Node pre1 = null; // 전 노드
 
         for (int i = 0; i < left - 1; i++) {
             pre1 = cur1;
             cur1 = cur1.next;
         }
 
-        Node cur2 = list.head;
-        Node pre2 = pre1;
+        Node cur2 = cur1; // 끝
+        Node pre2 = pre1; // 끝에서 전 노드
         Node after = null;
 
         for (int i = left; i <= right; i++) {
@@ -29,9 +29,16 @@ public class Practice3 {
             cur2.next = pre2;
             pre2 = cur2;
             cur2 = after;
+
+            System.out.println("after = " + after.data);
+            System.out.println("pre2.data = " + pre2.data);
+            System.out.println("cur2 = " + cur2.data);
         }
 
-        return null;
+        pre1.next = pre2;
+        cur1.next = cur2;
+
+        return list;
     }
     
     public static void main(String[] args) {

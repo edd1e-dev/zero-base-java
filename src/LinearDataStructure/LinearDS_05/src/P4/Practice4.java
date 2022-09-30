@@ -7,7 +7,9 @@ package LinearDataStructure.LinearDS_05.src.P4;
 // 각 문자열의 첫 글자가 같은 것끼리 같은 연결 리스트로 관리하기
 
 
+import java.util.Arrays;
 import java.util.HashSet;
+import java.util.Set;
 
 class Node {
     String data;
@@ -105,7 +107,32 @@ class LinkedList {
 public class Practice4 {
 
     public static void dataCollect(String[] data) {
+        Set<Character> set = new HashSet();
+        for (String item : data) {
+            set.add(item.toCharArray()[0]);
+        }
 
+        System.out.println(set);
+
+        Character[] arr = set.toArray(new Character[0]);
+
+        LinkedList[] linkedList = new LinkedList[set.size()];
+        for (int i = 0; i < linkedList.length; i++) {
+            linkedList[i] = new LinkedList(null, arr[i]);
+        }
+
+        for (String s : data) {
+            for (LinkedList list : linkedList) {
+                if (list.alphabet == s.toCharArray()[0]) {
+                    list.addData(s);
+                }
+            }
+        }
+
+        for (LinkedList list : linkedList) {
+            System.out.print(list.alphabet + ": ");
+            list.showData();
+        }
     }
 
     public static void main(String[] args) {
